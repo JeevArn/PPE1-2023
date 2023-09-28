@@ -35,4 +35,6 @@ commandes git :
 - git log : permet de voir l'ensemble des commits
 
 - git tag -a -m tagname [commit (si diff du commit courant)]
+
+## Séance du
   
