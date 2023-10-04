@@ -58,6 +58,8 @@ Sujet de la séance : Comment corriger des erreurs sur github ?
 
 **git revert** <commit> : créer un nouveau commit où les changements ont été marqués comme annulés (<commit> : SHA ou tag)
 
+XXXX lignes à supprimer XXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
 
