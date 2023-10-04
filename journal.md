@@ -1,6 +1,7 @@
 # Journal de Jeevya
 
-## Séance du 20 septembre 2023
+# Séance 1
+## 20 septembre 2023
 
 commandes utiles pour l'ex 1 :
 - mkdir : créer un dossier
@@ -10,7 +11,8 @@ commandes utiles pour l'ex 1 :
 - && : pour faire plusieurs commandes en même temps
 - "*" : remplacer des caractères dans un nom de fichier (ex: *.txt)
 
-## Séance du 27 septembre 2023
+# Séance 2
+## 27 septembre 2023
 
 Tâches effectuées pendant le cours :
 - correction ex1Arborescence
@@ -42,7 +44,8 @@ commandes git :
 
 A effectuer chaque semaine : **add > commit > push** 
 
-## Séance du 4 octobre 2023
+# Séance 3
+## 4 octobre 2023
 
 Sujet de la séance : Comment corriger des erreurs sur github ?
 
