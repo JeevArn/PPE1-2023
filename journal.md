@@ -42,5 +42,35 @@ commandes git :
 
 A effectuer chaque semaine : **add > commit > push** 
 
-## Séance du
-  
+## Séance du 4 octobre 2023
+
+Sujet de la séance : Comment corriger des erreurs sur github ?
+
+**git reset** <commit> :
+
+- HEAD : commit actuel
+- <tag> : étiquette placé sur un commit spécifique
+- ~[N] : remonter la flèche de l'ascendance directe ex : ~[1] représente le commit parent => non linéaire
+- ^[N] : Nième parent du commit ex: ^[1] : commit parent => linéaire
+- git reset HEAD~ : revenir avant le commit actuel, et annule la mise en place --soft HEAD~ ne l'annule pas
+  => fonctionne uniquement sur commit et pas sur fichiers spécifiques
+- gti reset --hard : fichier supprimé, retour version HEAD
+
+**git revert** <commit> : créer un nouveau commit où les changements ont été marqués comme annulés (<commit> : SHA ou tag)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
