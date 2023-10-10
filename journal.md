@@ -61,8 +61,13 @@ Sujet de la séance : Comment corriger des erreurs sur github ?
 
 **git revert** <commit> : créer un nouveau commit où les changements ont été marqués comme annulés (<commit> : SHA ou tag)
 
-XXXX lignes à supprimer XXXXXX
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+difficultés rencontrées pour les exercices :
+- une fois git reset appliqué au dernier commit, impossible de push des modifications sur le dépôt distant : "Updates were rejected because the tip of your current branch is behind"
+- tentatives pour résoudre le problème : création d'une branche temporaire, puis git reset --hard main, puis git cherry-pick une série de commits depuis la branche temporaire
+  => résultat : ça n'a pas marché
+
+
 
 
 
