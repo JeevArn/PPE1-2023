@@ -61,6 +61,7 @@ Sujet de la séance : Comment corriger des erreurs sur github ?
 
 **git revert** <commit> : créer un nouveau commit où les changements ont été marqués comme annulés (<commit> : SHA ou tag)
 
+<<<<<<< HEAD
 
 difficultés rencontrées pour les exercices :
 - une fois git reset appliqué au dernier commit, impossible de push des modifications sur le dépôt distant : "Updates were rejected because the tip of your current branch is behind"
@@ -78,17 +79,3 @@ Difficultés rencontrées pour les exercices :
 - pas réussi à accepter * pour l’année et le mois dans l'ex 2
 
 Création du groupe pour le projet avec Anissa (inalco) et Constance (inalco).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
