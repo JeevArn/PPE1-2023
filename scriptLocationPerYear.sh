@@ -2,6 +2,8 @@
 
 #écrire un script qui donne le nombre de Location par année
 
+cd ./docs_ex1Arborescence/
+
 #2016
 (echo "nombre d'annotations de location en 2016 :" && cat ann/2016/*/* | grep Location | wc -l) > exoShell_LocationPerYear.txt
 

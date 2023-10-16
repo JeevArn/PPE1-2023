@@ -4,6 +4,8 @@
 # prendre en argument l’année, le mois et le nombre de lieux à afficher
 # accepter * pour l’année et le mois.
 
+cd ./docs_ex1Arborescence/
+
 year=$1
 month=$2
 nbLoc=$3
