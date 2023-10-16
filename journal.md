@@ -81,8 +81,7 @@ Difficultés rencontrées pour les exercices :
 Création du groupe pour le projet avec Anissa (inalco) et Constance (inalco).
 
 Résolution du conflit rencontré en séance 3 avec :
-git config pull.rebase true
-résolution manuelle du conflit dans journal.md
-git add journal.md
-git rebase --continue
-
+- git config pull.rebase true
+- résolution manuelle du conflit dans journal.md
+- git add journal.md
+- git rebase --continue
