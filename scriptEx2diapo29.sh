@@ -4,10 +4,8 @@
 # prendre en argument l’année, le mois et le nombre de lieux à afficher
 # accepter * pour l’année et le mois.
 
-cd ./docs_ex1Arborescence/
-
 year=$1
 month=$2
 nbLoc=$3
 
-cat ./ann/"$year"/"$month"/* | grep Location | cut -f 3 | sort | uniq -c | sort -nr | head -n "$nbLoc"
+cat ./docs_ex1Arborescence/ann/"$year"/"$month"/* | grep Location | cut -f 3 | sort | uniq -c | sort -nr | head -n "$nbLoc"
