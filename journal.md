@@ -79,3 +79,10 @@ Difficultés rencontrées pour les exercices :
 - pas réussi à accepter * pour l’année et le mois dans l'ex 2
 
 Création du groupe pour le projet avec Anissa (inalco) et Constance (inalco).
+
+Résolution du conflit rencontré en séance 3 avec :
+git config pull.rebase true
+résolution manuelle du conflit dans journal.md
+git add journal.md
+git rebase --continue
+
