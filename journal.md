@@ -67,9 +67,17 @@ difficultés rencontrées pour les exercices :
 - tentatives pour résoudre le problème : création d'une branche temporaire, puis git reset --hard main, puis git cherry-pick une série de commits depuis la branche temporaire
   => résultat : ça n'a pas marché
 
+# Séance 4
+## 9 octobre 2023
 
+Abordé lors de la séance : 
+- les pipelines
+- intro aux scripts
 
+Difficultés rencontrées pour les exercices : 
+- pas réussi à accepter * pour l’année et le mois dans l'ex 2
 
+Création du groupe pour le projet avec Anissa (inalco) et Constance (inalco).
 
 
 
