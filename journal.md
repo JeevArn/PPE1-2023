@@ -61,8 +61,6 @@ Sujet de la séance : Comment corriger des erreurs sur github ?
 
 **git revert** <commit> : créer un nouveau commit où les changements ont été marqués comme annulés (<commit> : SHA ou tag)
 
-<<<<<<< HEAD
-
 difficultés rencontrées pour les exercices :
 - une fois git reset appliqué au dernier commit, impossible de push des modifications sur le dépôt distant : "Updates were rejected because the tip of your current branch is behind"
 - tentatives pour résoudre le problème : création d'une branche temporaire, puis git reset --hard main, puis git cherry-pick une série de commits depuis la branche temporaire
@@ -77,6 +75,7 @@ Abordé lors de la séance :
 
 Difficultés rencontrées pour les exercices : 
 - pas réussi à accepter * pour l’année et le mois dans l'ex 2
+- même '*' entre guillemet ça ne marche pas
 
 Création du groupe pour le projet avec Anissa (inalco) et Constance (inalco).
 
@@ -85,3 +84,33 @@ Résolution du conflit rencontré en séance 3 avec :
 - résolution manuelle du conflit dans journal.md
 - git add journal.md
 - git rebase --continue
+
+# Séance 5
+## 18 octobre 2023
+
+Abordé lors de la séance:
+- instructions de contrôle
+- test de vérification pour être sûr que toutes les conditions sont réunies (présence d'argument si requis, existence du fichier) avant de lancer des commandes
+
+Pour le projet :
+- on va faire des aspirations de pages web
+- enlever les balises du html pour avoir juste le texte
+
+codes HTTP :
+- 1XX : information
+- 200 : réussite
+- 3XX : redirections
+- 4XX : erreurs du client
+- 5XX : erreurs du serveurs
+
+Lynx : navigateur web en terminal
+-> retire tout le metatexte
+
+- option --dump : pour afficher le contenu textuel d'une page
+- option --dump --listonly : affiche uniquement la liste des liens
+
+wget et curl :      
+options:
+- -i :info sur interaction avec serveur
+- -L : suit les redirections
+- -o <fichier> : indique un fichier de sortie                                                                                 
