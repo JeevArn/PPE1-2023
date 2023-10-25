@@ -1,6 +1,0 @@
-nombre d'annotations de location en 2016 :
-    3144
-nombre d'annotations de location en 2017 :
-    2466
-nombre d'annotations de location en 2018 :
-    3110
