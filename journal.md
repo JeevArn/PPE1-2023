@@ -108,9 +108,78 @@ Lynx : navigateur web en terminal
 
 - option --dump : pour afficher le contenu textuel d'une page
 - option --dump --listonly : affiche uniquement la liste des liens
+- --nolist : sans les liens
 
 wget et curl :      
 options:
 - -i :info sur interaction avec serveur
 - -L : suit les redirections
-- -o <fichier> : indique un fichier de sortie                                                                                 
+- -o <fichier> : indique un fichier de sortie     
+
+# Séance 6
+## 25 octobre 2023           
+
+choix du mot pour le projet : "festival" (hésitation avec "genre")     
+langues : anglais ; thai ; coréen 
+=> problématiser le choix du mot
+
+Abordé lors de la séance :
+- révision HTML -> pour le rendu final du projet
+- construction de tableaux
+- il faudra avoir uniquement des codes 200 (réussite) dans le tableau
+- avoir un seul encodage au mieux UTF-8
+
+Exo lynx :
+lynx https://fr.wikipedia.org/wiki/Festival --dump > wikiFestival.txt
+lynx https://fr.wikipedia.org/wiki/Festival --dump --nolist > wikiFestivalNoLinks.txt
+
+Mini-projet :
+
+- lire le fichier ligne par ligne
+- vérifier si l'url est ok
+- si l'encodage est en UTF-8
+- si conditions réunies : alors on extrait le texte la page
+=> et à chaque fois si ça ne marche pas, soit on ne fait rien soit on effectue des traitement
+
+le script devra :
+- récupérer les url contenue dans le texte
+- écrire sur le terminal des info separées par des tabulations
+
+EX1 :
+
+1) pourquoi on n'utilise pas 'cat' :
+- car il va juste l'afficher, pas pratique pour faire des opérations après
+- si espaces dans les urls alors ça posera problème
+
+2) transformer "urls/fr.txt" en paramètre du script
+- remplacer par $1
+- ajout du if [ $# -ne 1 ]
+
+EX2 :
+
+1) Pour extraire le code HTTP de réponse à la requête : code=$(curl -o /dev/null -s -w "%{http_code}\n" -L $line)
+- -o /dev/null sert à spécifier qu'on n'affiche pas le contenu à l'écran
+- s : mode silencieux (pas d'info de progression de la requête)
+- -w "%{http_code}\n" : pour spécifier le format de sortie -> on demande à avoir uniquement le code HTTP
+- l'option -L pour suivre les redirections et corriger erreur 301 Moved Permanently
+- 404 Not Found et 502 Bad Gateway : pas de solution trouvée
+
+2) Pour extraire l'encodage : charset=$(curl -s -I "$line" | grep -i "Content-Type" | sed -n 's/.*charset=\([^;]*\).*/\1/p')
+- -I : pour afficher uniquement les entêtes
+- grep -i "Content-Type" : recherche la ligne d'entête qui contient Content-Type qui contient l'encodage
+- sed -n <regex> : recherche la regex dans la ligne
+- 's/.*charset=\([^;]*\).*/\1/p' : capture la valeur de l'encodage (tout ce qui suit "charset=" jusqu'au prochain ;)
+- s/ : début substitution
+- puis remplace la ligne par la valeur capturée, qui est stockée dans \1
+- -n : supprime les lignes non modifiées
+- p : affiche la ligne modifiée
+
+
+
+
+
+
+
+
+
+                                                           
