@@ -175,11 +175,40 @@ EX2 :
 - p : affiche la ligne modifiée
 
 
+# Séance 7
+## 8 novembre 2023 
+
+correction du mini-projet :
+- pour récupérer le code http, on a 3 options :
+curl -s -I https://fr.wikipedia.org/wiki/Robot | head -1 | grep -P -o '[0-9]{3}'
+curl -s -I https://fr.wikipedia.org/wiki/Robot | head -1 | cut -d" " -f2 
+curl -s -I -w "%{http_code}" -o /dev/null https://fr.wikipedia.org/wiki/Robot
+
+-w : (write out) on va récupérer des info sur l'interaction entre nous et le serveur distant par exemple ici "%{http_code}"
+
+suivre toutes les redirections : -L
+attention ! si on utilise grep il faudra rajouter tail -n 1 pour récupérer le dernier code
+
+- pour récupérer le charset :
+curl -s -I -L -w "%{content_type}" -o /dev/null https://fr.wikipedia.org/wiki/Robot | grep -P -o "charset=\S+" | cut -d"=" -f2 | tail -n 1
+-P : expression en Perl
+\S : en Perl correspond à un non espace
+
+autre solution pour trouver le charset :
+grep -P -o "charset=\K\S+"
+\K permet d'oublier tout ce qui est avant
+
+sur mac il faut installer la nouvelle version de grep :
+ggrep 
+-E
+-P
+
+HTML
+-> "boîtes dans des boîtes"
+structure en imbrication (!! pas d'enchâssement)
+
+transformer fichier tabulaire en table html
 
 
 
-
-
-
-
-                                                           
+                                                
