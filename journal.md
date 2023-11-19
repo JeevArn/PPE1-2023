@@ -198,8 +198,7 @@ autre solution pour trouver le charset :
 grep -P -o "charset=\K\S+"
 \K permet d'oublier tout ce qui est avant
 
-sur mac il faut installer la nouvelle version de grep :
-ggrep 
+sur mac il faut installer la nouvelle version de grep : ggrep 
 -E
 -P
 
@@ -209,6 +208,86 @@ structure en imbrication (!! pas d'enchâssement)
 
 transformer fichier tabulaire en table html
 
+# Séance 8
+## 15 novembre 2023 
+
+correction des exercices de la fiche TD Analyse d'un fichier texte :
+ex1) cat "$doc" | ggrep -P -o '\p{Latin}+' | tr '[:upper:]' '[:lower:]' | tr 'ÉÀÈÊ' 'éàèê'
+ex2) bash text2colonne.sh $FICHIER | sort  | uniq -c | sort -nr | head -n "$TOPN"
+ex3) 
+bash text2colonne.sh $FICHIER > col1
+echo " " > col2
+bash text2colonne.sh $FICHIER >> col2
+paste col2 col1
+
+exit convention : 
+- exit 0 : pas de pb
+- exit 1 : pb avec argument 1
+- exit 2 : pb avec argument 2
+etc.
+
+syntaxe regex pour la vérification des arguments :
+deux crochets [[ $argument =~ (regex) ]] pour faire des regex  
+
+
+Correction mini projet output html :
+(mettre > chemin/tableau.html directement dans la commande bash)
+
+```
+if [[ $# -ne 1]];
+then
+	echo "on veut exactement un argument"
+	exit
+fi
+
+URLS=$1
+
+if [ ! -f $URLS]
+then 
+	echo "on attend un fichier pas un dossier"
+	exit
+fi
+
+
+echo "<html>
+	<head>
+		<meta charset=\"UTF-8\">
+	</head>
+	<body>"
+		
+echo "		<table>
+			<tr><th>ligne</th><th>URL</th><th>encodage</th></tr>"
+
+lineno=1
+while read -r URL
+do
+	response=$(curl -s -I -L -w "%{http_code}" -o /dev/null $URL)
+	encoding=$(curl -s -I -L -w "%{content_type}" -o /dev/null $URL | grep -P -o "charset=\S+" | cut -d"=" -f2 | tail -n 1)
+	#echo -e "$lineno \t $URL \t $response"
+	echo "<tr>
+            <td>$N</td>
+            <td>$line</td>
+            <td>$code</td>
+            <td>$charset</td>
+        </tr>"
+	lineno=$(($lineno + 1))
+done < $URLS
+
+echo "		</table>
+		</body>
+	</html>"
+```
+
+Déploiement du site sur github
+- balise style pour le css ou séparé avec un fichier css avec uniquement la feuille de style
+-> relié avec <link rel="stylesheet" href="chemin/style.css"/>
+-> possibilité d'associer à des noms de balise ou à des des classes .boxed{...}
+
+On utilisera Bulma pour le css :
+- classe de base
+- classe de modifieur
+
+ex pour les tables : https://bulma.io/documentation/elements/table/
 
 
                                                 

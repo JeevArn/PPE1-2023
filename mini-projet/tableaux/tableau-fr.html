@@ -1,60 +1,92 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>URL Information</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PPE Mini-Projet - Tableau</title>
+    <!-- Inclure la feuille de style Bulma -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
 </head>
+
 <body>
-    <h2>URL Information</h2>
-    <table>
-        <tr>
-            <th>#</th>
-            <th>URL</th>
-            <th>HTTP Code</th>
-            <th>Charset</th>
-        </tr>
+    <!-- Barre de navigation -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <h1 class="title is-4">PPE Mini-Projet</h1>
+            </a>
+        </div>
+        <!-- Vous pouvez inclure une barre de navigation ici si nécessaire -->
+        <div id="navbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="../../index.html">
+                    Accueil
+                </a>
+
+                <a class="navbar-item" href="tableau-fr.html">
+                    Tableau
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Héros -->
+    <section class="hero is-info is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">Tableau URL</h1>
+                <p class="subtitle">Informations sur les URL</p>
+            </div>
+        </div>
+    </section>
+<!-- Section avec le tableau -->
+<section class="section">
+        <div class="table is-bordered is-narrow is-hoverable is-fullwidth">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>URL</th>
+                        <th>HTTP Code</th>
+                        <th>Charset</th>
+                    </tr>
+                </thead>
+                <tbody>
         <tr>
             <td>1</td>
-            <td>https://fr.wikipedia.org/wiki/Robot</td>
+            <td><a href=https://fr.wikipedia.org/wiki/Robot>https://fr.wikipedia.org/wiki/Robot</a></td>
             <td>200</td>
             <td>UTF-8</td>
         </tr>
         <tr>
             <td>2</td>
-            <td>https://fr.wikipedia.org/wiki/Robot_de_cuisine</td>
+            <td><a href=https://fr.wikipedia.org/wiki/Robot_de_cuisine>https://fr.wikipedia.org/wiki/Robot_de_cuisine</a></td>
             <td>200</td>
             <td>UTF-8</td>
         </tr>
         <tr>
             <td>3</td>
-            <td>fr.wikipedia.org/wiki/Robot_d%27indexation</td>
+            <td><a href=fr.wikipedia.org/wiki/Robot_d%27indexation>fr.wikipedia.org/wiki/Robot_d%27indexation</a></td>
             <td>200</td>
             <td>UTF-8</td>
         </tr>
         <tr>
             <td>4</td>
-            <td>https://fr.wikipedia.org/wiki/Bot_informatique</td>
+            <td><a href=https://fr.wikipedia.org/wiki/Bot_informatique>https://fr.wikipedia.org/wiki/Bot_informatique</a></td>
             <td>200</td>
             <td>UTF-8</td>
         </tr>
         <tr>
             <td>5</td>
-            <td>https://fr.wikipedia.org/wiki/Robot_(Leonard_de_Vinci)</td>
+            <td><a href=https://fr.wikipedia.org/wiki/Robot_(Leonard_de_Vinci)>https://fr.wikipedia.org/wiki/Robot_(Leonard_de_Vinci)</a></td>
             <td>404</td>
             <td>UTF-8</td>
         </tr>
-    </table>
+    </tbody>
+        </table>
+   	 </div>
+    </section>
 </body>
 </html>
