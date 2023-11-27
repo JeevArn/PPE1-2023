@@ -289,5 +289,26 @@ On utilisera Bulma pour le css :
 
 ex pour les tables : https://bulma.io/documentation/elements/table/
 
+# Séance 9
+## 22 novembre 2023 
+           
+Travail de groupe :
+choix du mot : "héritage"
+langues : EN, FR, KR
+(changement de langue : anglais à la place du thai)
+
+problèmes rencontrés :
+- le concordancier ne fonctionne pas
+- certains charset ne s'affichent pas dans le tableau
+- certains contextes ne sont pas extrait alors que le mot est bien présent dans la page
+- certains sites affichent le code 000
+- il y a des problèmes d'encodage en coréen
+
+lien du dépôt github commun au groupe : https://github.com/JeevArn/PPE1-groupWork
+lien du site créé : https://jeevarn.github.io/PPE1-groupWork/index.html
+
+
+
+
 
                                                 
